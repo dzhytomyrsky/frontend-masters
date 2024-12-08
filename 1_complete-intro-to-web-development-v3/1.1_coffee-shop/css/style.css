@@ -1,0 +1,194 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    background-color: #43281C;
+}
+
+.h1 {
+    margin: 0;
+    color: #FBF2C0;
+    font-size: 24px;
+}
+
+.h2 {
+    color: #885a2d;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.h3 {
+    font-size: 18px;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__logo {
+    width: 25px;
+    margin-right: 6px;    
+}
+
+.content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.content__tile {
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    background-color: #eee1d5;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px -3px #666;
+}
+
+.content__tile:last-child {
+    margin-bottom: 0;
+}
+
+.order-info {
+    display: grid;
+    grid-template-areas: "shopping-cart client-info";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.shopping-cart {
+    grid-area: shopping-cart;
+    margin-bottom: 0;
+}
+
+.shopping-cart__list {
+    margin: 0;
+    padding: 0;
+}
+
+.shopping-cart__item {
+    display: grid;
+    grid-template-areas: "item-quantity item-description item-price";
+    grid-template-columns: 50px 1fr 100px;
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 2px solid #ddb892;
+}
+
+.shopping-cart__item:first-child {
+    padding-top: 0;
+}
+
+.shopping-cart__item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.shopping-cart__item-title {
+    margin: 0 0 8px;
+    padding-top: 0;
+}
+
+.shopping-cart__item-quantity {
+    margin-top: 0;
+}
+
+.shopping-cart__item-pecularity-list {
+    padding: 0;
+    list-style: none;
+}
+
+.shopping-cart__item-pecularity-item {
+    margin-bottom: 6px;
+    color:#B08968;
+}
+
+.shopping-cart__item-pecularity-item:last-child {
+    margin-bottom: 0
+}
+
+.shopping-cart__item-price {
+    grid-area: item-price;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.client-info {
+    grid-area: client-info;
+}
+
+.form__input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form__input-wrapper_cvv {
+    width: 100%;
+    max-width: 300px;
+}
+
+.form__input-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.form__input {
+    width: 100%;
+    padding: 8px;
+    border: 2px #885a2d solid;
+    border-radius: 100px;
+    background-color: transparent;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.form__input:active,
+.form__input:focus {
+    border-color: #885a2d;
+    outline: 0;
+}
+
+.form__input-label {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-50%);
+    padding: 2px;
+    background-color: #eee1d5;
+    color: #885a2d;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.receipe {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto 20px;
+}
+
+.receipe__item-price {
+    text-align: right;
+}
+
+.receipe__item-price,
+.receipe__item-title {
+    padding-bottom: 20px;
+}
+
+.receipe__item-price_total,
+.receipe__item-title_total {
+    font-weight: 700;
+}
+
+.place-order-button {
+    width: 100%;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 100px;
+    background-color: #deb993;
+}

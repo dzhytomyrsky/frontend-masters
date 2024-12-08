@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="header__logo" src="img/coffee_masters_logo.png" alt="coffee shop logo">
+            <h1 class="h1">Coffee Masters</h1>
+        </header>
+        <div class="content">
+            <div class="order-info">
+                <div class="shopping-cart content__tile">
+                    <h2 class="content__header h2">Items</h2>
+                    <ul class="shopping-cart__list">
+                        <li class="shopping-cart__item">
+                            <p class="shopping-cart__item-quantity">
+                                1x
+                            </p>
+                            <div class="shopping-cart__item-description">
+                                <h3 class="shopping-cart__item-title h3">
+                                    Capuccino
+                                </h3>
+                                <ul class="shopping-cart__item-pecularity-list">
+                                    <li class="shopping-cart__item-pecularity-item">
+                                        Lite foam
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="shopping-cart__item-price">
+                                <span class="shopping-cart__item-currency">$</span>3.35
+                            </p>
+                        </li>
+                        <li class="shopping-cart__item">
+                            <p class="shopping-cart__item-quantity">
+                                1x
+                            </p>
+                            <div class="shopping-cart__item-description">
+                                <h3 class="shopping-cart__item-title h3">
+                                    Capuccino
+                                </h3>
+                                <ul class="shopping-cart__item-pecularity-list">
+                                    <li class="shopping-cart__item-pecularity-item">
+                                        Lite milk
+                                    </li>
+                                    <li class="shopping-cart__item-pecularity-item">
+                                        Double espresso
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="shopping-cart__item-price">
+                                <span class="shopping-cart__item-currency">$</span>3.85
+                            </p>
+                        </li>
+                        <li class="shopping-cart__item">
+                            <p class="shopping-cart__item-quantity">
+                                1x
+                            </p>
+                            <div class="shopping-cart__item-description">
+                                <h3 class="shopping-cart__item-title h3">
+                                    Croissant
+                                </h3>
+                                <ul class="shopping-cart__item-pecularity-list">
+                                    <li class="shopping-cart__item-pecularity-item">
+                                        Butter
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="shopping-cart__item-price">
+                                <span class="shopping-cart__item-currency">$</span>2.45
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="client-info">
+                    <div class="contact-info content__tile">
+                        <h2 class="content__header h2">Name</h2>
+                        <div class="form__input-wrapper">
+                            <input type="text" class="form__input" id="name">
+                            <label for="name" class="form__input-label">Name for order</label>
+                        </div>
+                    </div>
+                    <div class="payment-info content__tile">
+                        <h2 class="content__header h2">Payment</h2>
+                        <div class="form__input-wrapper">
+                            <input type="text" class="form__input" id="card-number">
+                            <label for="card-number" class="form__input-label">Card number</label>    
+                        </div>
+                        <div class="form__input-wrapper form__input-wrapper_cvv">
+                            <input type="text" class="form__input" id="cvv-number">
+                            <label for="cvv-number" class="form__input-label">CVV number</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="receipe">
+                <tr class="receipe__item">
+                    <td class="receipe__item-title">Subtotal:</td>
+                    <td class="receipe__item-price">$9.65</td>
+                </tr>
+                <tr class="receipe__item">
+                    <td class="receipe__item-title">Tax:</td>
+                    <td class="receipe__item-price">$0.82</td>
+                </tr>
+                <tr class="receipe__item">
+                    <td class="receipe__item-title receipe__item-title_total">Total:</td>
+                    <td class="receipe__item-price receipe__item-title_total">$10.47</td>
+                </tr>
+            </table>
+            <button class="place-order-button">
+                Place order
+            </button>
+        </div>
+    </div>
+</body>
+</html>
