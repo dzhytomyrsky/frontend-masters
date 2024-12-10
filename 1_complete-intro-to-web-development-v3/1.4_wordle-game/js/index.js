@@ -15,10 +15,7 @@ const winningElement = document.querySelector('h1')
 
 const setLoadingStatus = (value) => {
     isLoading = value
-    
-    value === true
-        ? loadingElement.classList.add('active')
-        : loadingElement.classList.remove('active')
+    loadingElement.classList.toggle('active', value)
 }
 
 const setWordObj = (word) => {
@@ -67,11 +64,15 @@ const submitWord = () => {
         if (buffer[i] === word[i]) {
             letterElements[baseIndex + i].classList.add('correct')
             localWordObj[buffer[i]] -= 1;
-        } else {
-            if (localWordObj[buffer[i]] && localWordObj[buffer[i]] > 0) {
-                letterElements[baseIndex + i].classList.add('included')
-                localWordObj[buffer[i]] -= 1;
-            }
+        }
+    }
+
+    for (let i = 0; i < buffer.length; i++) {
+        if (localWordObj[buffer[i]] && localWordObj[buffer[i]] > 0) {
+            letterElements[baseIndex + i].classList.add('included')
+            localWordObj[buffer[i]] -= 1;
+        } else if (buffer[i] !== word[i]) {
+            letterElements[baseIndex + i].classList.add('wrong')
         }
     }
 
@@ -117,7 +118,6 @@ const handleKeyUp = (e) => {
 
     if (key === 'ENTER') {
         if (buffer.length < WORD_LENGTH) return
-
         
         validateForWord(buffer)
             .then((responce) => {

@@ -56,6 +56,10 @@ body {
     border-color: #e8a738;
 }
 
+.included {
+    border-color: #e8a738;
+}
+
 .loading {
     opacity: 0;
 }
