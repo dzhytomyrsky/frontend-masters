@@ -1,0 +1,285 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: "Oxygen", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--magenta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.gradient {
+    height: 3px;
+    background-image: linear-gradient(to right, #ff17e4, #86fbfb);
+}
+
+/* NAVBAR */
+nav {
+    padding: 1rem;
+    font-family: var(--mono);
+    font-size: 80%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover,
+nav h1 [class*="fa-"]:hover {
+    color: var(--magenta);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+.button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--magenta);
+    font-family: var(--mono);
+    text-decoration: none;
+}
+
+.button:hover {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--hotmag);
+}
+
+/* INTRO */
+.intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem 10rem;
+}
+
+.intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+}
+
+.intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+.contact {
+    padding: 5rem 1rem;
+    background-color: var(--plum);
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    max-width: 400px;
+    margin: 0 auto 3rem;
+}
+
+/* PROJECTS */
+.bg-dkblue {
+    background-color: var(--dkblue);
+}
+
+.projects {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 4rem 1rem;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+
+.projects h3 {
+    color: var(--aqua);
+}
+
+.projects h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+
+.projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.projects img {
+    display: block;
+    margin: 2rem 0 4rem;
+    padding: 1rem;
+    border-top: 1px solid var(--aqua);
+    border-left: 1px solid var(--aqua);
+    border-radius: 2rem;
+}
+
+.blackbox {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+    padding: 4rem 1rem;
+    text-align: center;   
+}
+
+.footer h2 {
+    margin: 0 auto 2rem;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto 2rem;
+    padding: 0;
+    list-style: none;
+    font-size: 3rem;
+}
+
+@media (min-width: 550px) {
+    .projects article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+    .projects .text {
+        order: 2;
+        text-align: right;
+        grid-column: 5 / 11;
+        grid-row: 1 / 2;
+    }
+    .project ul {
+        justify-content: end;
+    }
+    .projects img {
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+    }
+
+    .reverse .text {
+        text-align: left;
+        grid-column: 1 / 7;
+    }
+    .reverse ul {
+        justify-content: start;
+    }
+    .reverse img {
+        grid-column: 6 / 11;
+    }
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        margin-right: auto;
+    }
+}
