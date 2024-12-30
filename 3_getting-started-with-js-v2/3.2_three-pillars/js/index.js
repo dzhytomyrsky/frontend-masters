@@ -25,9 +25,9 @@ function loadBooks(bookShelf) {
         for (let book of books) {
             bookShelf.addFavoriteBook(book);
         }
-    });
 
-    bookShelf.printFavoriteBooks();
+        bookShelf.printFavoriteBooks();
+    });
 }
 
 var BOOK_API = "https://some.url/api";
